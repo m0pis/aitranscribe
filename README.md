@@ -11,9 +11,8 @@
 
 ## Визуализация
 
-| Тёмная тема (`Obsidian`) | Светлая тема (`Bone`) |
-| :---: | :---: |
-| ![Dark](./assets/preview.svg) | ![Light](./assets/preview-light.svg) |
+![NotsAI Dark Theme](./assets/preview.svg)
+![NotsAI Light Theme](./assets/preview-light.svg)
 
 Пример работы консольного движка на C++20:
 
