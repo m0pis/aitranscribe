@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480">
+  <defs>
+    <radialGradient id="roseGlow" cx="50%" cy="0%" r="55%">
+      <stop offset="0%" stop-color="#E9699C" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#08080A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Базовый фон Obsidian #08080A + верхнее свечение Rosewater -->
+  <rect width="960" height="480" fill="#08080A"/>
+  <rect width="960" height="320" fill="url(#roseGlow)"/>
+  <rect x="0.5" y="0.5" width="959" height="479" fill="none" stroke="#EFEAE3" stroke-opacity="0.18" stroke-width="1"/>
+
+  <!-- Верхняя шапка .bar (высота 44px, hairline 1px) -->
+  <line x1="0" y1="44" x2="960" y2="44" stroke="#EFEAE3" stroke-opacity="0.13" stroke-width="1"/>
+  
+  <!-- Бренд N. (Bodoni/Georgia) -->
+  <text x="20" y="30" font-family="Georgia, 'Bodoni MT', serif" font-size="24" fill="#EFEAE3" letter-spacing="-0.5">N<tspan fill="#E9699C">.</tspan></text>
+  <text x="52" y="27" font-family="'Cascadia Mono', Consolas, monospace" font-size="10" fill="#8B878E" letter-spacing="1.5">NOTSAI // C++20 AUDIO-TO-MIDI ENGINE</text>
+
+  <!-- Правые индикаторы в шапке (острые углы 0px, 1px hairline) -->
+  <g transform="translate(615, 10)">
+    <rect x="0" y="0" width="148" height="25" fill="none" stroke="#EFEAE3" stroke-opacity="0.13" stroke-width="1"/>
+    <text x="10" y="16" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" font-weight="600" fill="#C9E45A">1.42s</text>
+    <text x="44" y="16" font-family="'Bahnschrift', sans-serif" font-size="11.5" fill="#8B878E">·</text>
+    <text x="54" y="16" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" font-weight="500" fill="#E9699C">F1 89.4%</text>
+    <text x="108" y="16" font-family="'Bahnschrift', sans-serif" font-size="11.5" fill="#EFEAE3">88 kl</text>
+
+    <!-- Индикатор DBG / RAM (контур полыни #C9E45A) -->
+    <rect x="156" y="0" width="96" height="25" fill="none" stroke="#C9E45A" stroke-width="1"/>
+    <text x="204" y="16" text-anchor="middle" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.5" fill="#C9E45A" letter-spacing="1">ZERO-RAM</text>
+
+    <!-- Кнопка настроек .ico.on (контур #E9699C) -->
+    <rect x="260" y="0" width="60" height="25" fill="none" stroke="#E9699C" stroke-width="1"/>
+    <text x="290" y="16" text-anchor="middle" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.5" fill="#E9699C" letter-spacing="1">ONNX</text>
+  </g>
+
+  <!-- Разделитель левой панели управления (340px) и рабочей области -->
+  <line x1="340" y1="44" x2="340" y2="444" stroke="#EFEAE3" stroke-opacity="0.13" stroke-width="1"/>
+
+  <!-- ================= ЛЕВАЯ КОЛОНКА (УПРАВЛЕНИЕ В СТИЛЕ ABSINTHE) ================= -->
+  <g transform="translate(20, 60)">
+    <!-- Главная pill-кнопка .snap -->
+    <rect x="0" y="0" width="300" height="38" rx="19" fill="#E9699C" fill-opacity="0.14" stroke="#E9699C" stroke-width="1"/>
+    <text x="18" y="23" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="13" font-weight="500" fill="#E9699C">Транскрибировать аудио</text>
+    <path d="M270 19h12M277 14l5 5-5 5" fill="none" stroke="#E9699C" stroke-width="1.3" stroke-linecap="round"/>
+
+    <!-- Список параметров .list (.r строки с нижней линией 1px) -->
+    <!-- Строка 1 -->
+    <g transform="translate(0, 52)">
+      <line x1="0" y1="34" x2="300" y2="34" stroke="#EFEAE3" stroke-opacity="0.13"/>
+      <text x="0" y="21" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" fill="#8B878E">Входной поток</text>
+      <text x="300" y="21" text-anchor="end" font-family="'Cascadia Mono', Consolas, monospace" font-size="11" fill="#EFEAE3">prelude_op23.wav</text>
+    </g>
+
+    <!-- Строка 2 -->
+    <g transform="translate(0, 86)">
+      <line x1="0" y1="34" x2="300" y2="34" stroke="#EFEAE3" stroke-opacity="0.13"/>
+      <text x="0" y="21" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" fill="#8B878E">Сетка квантования</text>
+      <rect x="242" y="6" width="58" height="22" fill="none" stroke="#EFEAE3" stroke-opacity="0.22"/>
+      <text x="271" y="21" text-anchor="middle" font-family="'Cascadia Mono', Consolas, monospace" font-size="11" fill="#EFEAE3">1/16</text>
+    </g>
+
+    <!-- Строка 3 -->
+    <g transform="translate(0, 120)">
+      <line x1="0" y1="34" x2="300" y2="34" stroke="#EFEAE3" stroke-opacity="0.13"/>
+      <text x="0" y="21" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" fill="#8B878E">Темп (BPM) · Порог</text>
+      <rect x="194" y="6" width="46" height="22" fill="none" stroke="#EFEAE3" stroke-opacity="0.22"/>
+      <text x="217" y="21" text-anchor="middle" font-family="'Cascadia Mono', Consolas, monospace" font-size="11" fill="#C9E45A">118</text>
+      <rect x="248" y="6" width="52" height="22" fill="none" stroke="#EFEAE3" stroke-opacity="0.22"/>
+      <text x="274" y="21" text-anchor="middle" font-family="'Cascadia Mono', Consolas, monospace" font-size="11" fill="#EFEAE3">0.55</text>
+    </g>
+
+    <!-- Строка 4 (Тумблер .sw в стиле ABSINTHE) -->
+    <g transform="translate(0, 154)">
+      <line x1="0" y1="34" x2="300" y2="34" stroke="#EFEAE3" stroke-opacity="0.13"/>
+      <text x="0" y="21" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" fill="#8B878E">Фильтрация вокала</text>
+      <rect x="270" y="9" width="30" height="16" rx="8" fill="#E9699C" fill-opacity="0.16" stroke="#E9699C" stroke-width="1"/>
+      <circle cx="291" cy="17" r="4" fill="#E9699C"/>
+    </g>
+
+    <!-- Строка 5 (Тумблер .sw) -->
+    <g transform="translate(0, 188)">
+      <line x1="0" y1="34" x2="300" y2="34" stroke="#EFEAE3" stroke-opacity="0.13"/>
+      <text x="0" y="21" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" fill="#8B878E">Zero-Retention (ОЗУ)</text>
+      <rect x="270" y="9" width="30" height="16" rx="8" fill="#E9699C" fill-opacity="0.16" stroke="#E9699C" stroke-width="1"/>
+      <circle cx="291" cy="17" r="4" fill="#E9699C"/>
+    </g>
+
+    <!-- Вкладки .tabs -->
+    <g transform="translate(0, 238)">
+      <line x1="0" y1="24" x2="300" y2="24" stroke="#EFEAE3" stroke-opacity="0.13"/>
+      <text x="0" y="15" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="12" fill="#EFEAE3">Ядро C++</text>
+      <line x1="0" y1="24" x2="58" y2="24" stroke="#E9699C" stroke-width="1.5"/>
+      <text x="78" y="15" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="12" fill="#8B878E">Экспорт</text>
+    </g>
+
+    <!-- Параметры ядра -->
+    <g transform="translate(0, 266)">
+      <line x1="0" y1="32" x2="300" y2="32" stroke="#EFEAE3" stroke-opacity="0.13"/>
+      <text x="0" y="20" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" fill="#8B878E">Архитектура</text>
+      <text x="300" y="20" text-anchor="end" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="12" fill="#EFEAE3">2D CNN · Onsets &amp; Frames</text>
+    </g>
+    <g transform="translate(0, 298)">
+      <line x1="0" y1="32" x2="300" y2="32" stroke="#EFEAE3" stroke-opacity="0.13"/>
+      <text x="0" y="20" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" fill="#8B878E">Спектр</text>
+      <text x="300" y="20" text-anchor="end" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="12" fill="#EFEAE3">CQT · PocketFFT (AVX2)</text>
+    </g>
+    <g transform="translate(0, 330)">
+      <line x1="0" y1="32" x2="300" y2="32" stroke="#EFEAE3" stroke-opacity="0.13"/>
+      <text x="0" y="20" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="11.5" fill="#8B878E">Выходные форматы</text>
+      <text x="300" y="20" text-anchor="end" font-family="'Cascadia Mono', Consolas, monospace" font-size="11" fill="#C9E45A">.MID · .MUSICXML · .SVG</text>
+    </g>
+  </g>
+
+  <!-- ================= ПРАВАЯ КОЛОНКА (СПЕКТРОГРАММА CQT + ПАРТИТУРА) ================= -->
+  <g transform="translate(360, 60)">
+    <!-- Блок 1: Матрица Onsets & Frames (CQT Piano Roll) -->
+    <text x="0" y="12" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.5" fill="#8B878E" letter-spacing="1.2">01 // СПЕКТРОГРАММА CQT И МАТРИЦА АКТИВАЦИИ (ONSETS &amp; FRAMES)</text>
+    
+    <rect x="0" y="22" width="580" height="155" fill="#121216" stroke="#EFEAE3" stroke-opacity="0.16" stroke-width="1"/>
+    <!-- Сетка тактов и полутонов -->
+    <g stroke="#EFEAE3" stroke-opacity="0.06" stroke-width="1">
+      <line x1="0" y1="53" x2="580" y2="53"/>
+      <line x1="0" y1="84" x2="580" y2="84"/>
+      <line x1="0" y1="115" x2="580" y2="115"/>
+      <line x1="0" y1="146" x2="580" y2="146"/>
+      <line x1="145" y1="22" x2="145" y2="177"/>
+      <line x1="290" y1="22" x2="290" y2="177"/>
+      <line x1="435" y1="22" x2="435" y2="177"/>
+    </g>
+
+    <!-- Метки частот CQT -->
+    <g font-family="'Cascadia Mono', Consolas, monospace" font-size="9" fill="#8B878E">
+      <text x="8" y="42">C5 · 523Hz</text>
+      <text x="8" y="73">G4 · 392Hz</text>
+      <text x="8" y="104">E4 · 329Hz</text>
+      <text x="8" y="135">C4 · 261Hz</text>
+      <text x="8" y="166">G3 · 196Hz</text>
+    </g>
+
+    <!-- Детектированные ноты: яркая полоска Onset (#E9699C) + тело ноты Frame (#C9E45A / #9C98D8) -->
+    <!-- Такт 1 -->
+    <rect x="75" y="124" width="60" height="10" fill="#E9699C" fill-opacity="0.22" stroke="#E9699C" stroke-width="1"/>
+    <rect x="75" y="124" width="4" height="10" fill="#E9699C"/>
+
+    <rect x="145" y="93" width="68" height="10" fill="#C9E45A" fill-opacity="0.18" stroke="#C9E45A" stroke-width="1"/>
+    <rect x="145" y="93" width="4" height="10" fill="#C9E45A"/>
+
+    <rect x="145" y="155" width="68" height="10" fill="#9C98D8" fill-opacity="0.22" stroke="#9C98D8" stroke-width="1"/>
+    <rect x="145" y="155" width="4" height="10" fill="#9C98D8"/>
+
+    <rect x="222" y="62" width="58" height="10" fill="#E9699C" fill-opacity="0.22" stroke="#E9699C" stroke-width="1"/>
+    <rect x="222" y="62" width="4" height="10" fill="#E9699C"/>
+
+    <!-- Такт 2 (Полифонический аккорд) -->
+    <rect x="290" y="34" width="110" height="10" fill="#C9E45A" fill-opacity="0.2" stroke="#C9E45A" stroke-width="1"/>
+    <rect x="290" y="34" width="4" height="10" fill="#C9E45A"/>
+
+    <rect x="290" y="93" width="110" height="10" fill="#E9699C" fill-opacity="0.22" stroke="#E9699C" stroke-width="1"/>
+    <rect x="290" y="93" width="4" height="10" fill="#E9699C"/>
+
+    <rect x="290" y="124" width="110" height="10" fill="#9C98D8" fill-opacity="0.22" stroke="#9C98D8" stroke-width="1"/>
+    <rect x="290" y="124" width="4" height="10" fill="#9C98D8"/>
+
+    <rect x="415" y="62" width="85" height="10" fill="#E9699C" fill-opacity="0.22" stroke="#E9699C" stroke-width="1"/>
+    <rect x="415" y="62" width="4" height="10" fill="#E9699C"/>
+
+    <rect x="510" y="124" width="55" height="10" fill="#C9E45A" fill-opacity="0.2" stroke="#C9E45A" stroke-width="1"/>
+    <rect x="510" y="124" width="4" height="10" fill="#C9E45A"/>
+
+    <!-- Курсор-плейхед -->
+    <line x1="290" y1="22" x2="290" y2="177" stroke="#E9699C" stroke-width="1"/>
+
+    <!-- Блок 2: Векторный нотный стан (MusicXML -> SVG) -->
+    <text x="0" y="202" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.5" fill="#8B878E" letter-spacing="1.2">02 // ВЕКТОРНАЯ НОТНАЯ ПАРТИТУРА (MUSICXML 4.0 · SVG RENDER)</text>
+    
+    <rect x="0" y="212" width="580" height="152" fill="#121216" stroke="#EFEAE3" stroke-opacity="0.16" stroke-width="1"/>
+
+    <!-- Нотный стан (цвет Bone #EFEAE3) -->
+    <g stroke="#EFEAE3" stroke-opacity="0.45" stroke-width="1">
+      <line x1="24" y1="252" x2="556" y2="252"/>
+      <line x1="24" y1="264" x2="556" y2="264"/>
+      <line x1="24" y1="276" x2="556" y2="276"/>
+      <line x1="24" y1="288" x2="556" y2="288"/>
+      <line x1="24" y1="300" x2="556" y2="300"/>
+      <!-- Тактовые черты -->
+      <line x1="24" y1="252" x2="24" y2="300" stroke-opacity="0.85" stroke-width="1.5"/>
+      <line x1="295" y1="252" x2="295" y2="300" stroke-opacity="0.65"/>
+      <line x1="556" y1="252" x2="556" y2="300" stroke-opacity="0.85" stroke-width="1.5"/>
+    </g>
+
+    <!-- Скрипичный ключ и размер 4/4 -->
+    <text x="32" y="293" font-family="Georgia, serif" font-size="42" fill="#EFEAE3">𝄞</text>
+    <text x="68" y="274" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#8B878E">4</text>
+    <text x="68" y="294" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#8B878E">4</text>
+
+    <!-- Ноты (Bone #EFEAE3 + акцентный такт Rosewater #E9699C) -->
+    <g fill="#EFEAE3" stroke="#EFEAE3" stroke-width="1.6">
+      <ellipse cx="115" cy="288" rx="6.5" ry="4.5" transform="rotate(-18 115 288)"/>
+      <line x1="121" y1="288" x2="121" y2="250"/>
+
+      <ellipse cx="175" cy="276" rx="6.5" ry="4.5" transform="rotate(-18 175 276)"/>
+      <line x1="181" y1="276" x2="181" y2="238"/>
+
+      <ellipse cx="235" cy="264" rx="6.5" ry="4.5" transform="rotate(-18 235 264)"/>
+      <line x1="241" y1="264" x2="241" y2="228"/>
+    </g>
+
+    <!-- Выделенный полифонический аккорд (Rosewater #E9699C) -->
+    <g fill="#E9699C" stroke="#E9699C" stroke-width="1.6">
+      <ellipse cx="345" cy="294" rx="6.5" ry="4.5" transform="rotate(-18 345 294)"/>
+      <ellipse cx="345" cy="276" rx="6.5" ry="4.5" transform="rotate(-18 345 276)"/>
+      <ellipse cx="345" cy="258" rx="6.5" ry="4.5" transform="rotate(-18 345 258)"/>
+      <line x1="351" y1="294" x2="351" y2="225"/>
+    </g>
+
+    <g fill="#EFEAE3" stroke="#EFEAE3" stroke-width="1.6">
+      <ellipse cx="425" cy="270" rx="6.5" ry="4.5" transform="rotate(-18 425 270)"/>
+      <line x1="431" y1="270" x2="431" y2="234"/>
+
+      <ellipse cx="500" cy="282" rx="6.5" ry="4.5" transform="rotate(-18 500 282)"/>
+      <line x1="506" y1="282" x2="506" y2="246"/>
+    </g>
+
+    <!-- Кнопки экспорта под партитурой (острые углы 0px) -->
+    <g transform="translate(320, 326)">
+      <rect x="0" y="0" width="115" height="24" fill="none" stroke="#C9E45A" stroke-width="1"/>
+      <text x="57" y="15" text-anchor="middle" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.5" fill="#C9E45A" letter-spacing="0.8">СКАЧАТЬ .MID</text>
+
+      <rect x="125" y="0" width="120" height="24" fill="none" stroke="#EFEAE3" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="185" y="15" text-anchor="middle" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.5" fill="#EFEAE3" letter-spacing="0.8">MUSICXML / SVG</text>
+    </g>
+  </g>
+
+  <!-- Нижний подвал .foot (высота 36px, точка-индикатор #C9E45A с розовым свечением) -->
+  <line x1="0" y1="444" x2="960" y2="444" stroke="#EFEAE3" stroke-opacity="0.13" stroke-width="1"/>
+  <circle cx="24" cy="462" r="5" fill="#E9699C" fill-opacity="0.25"/>
+  <circle cx="24" cy="462" r="2.8" fill="#C9E45A"/>
+  <text x="36" y="465" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.5" fill="#EFEAE3" letter-spacing="1">ONNX RUNTIME C++20 · STATELESS</text>
+  <text x="940" y="465" text-anchor="end" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.5" fill="#8B878E" letter-spacing="1">VER 1.0 · MIT</text>
+</svg>
