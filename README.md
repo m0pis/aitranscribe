@@ -1,4 +1,4 @@
-# NotsAI
+# Разработка высокопроизводительного программного комплекса автоматической транскрипции музыки в формат MIDI (NotsAI)
 
 ![C++20](https://img.shields.io/badge/C%2B%2B-20-08080A?style=flat-square&logo=cplusplus&logoColor=E9699C)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-08080A?style=flat-square&logo=python&logoColor=C9E45A)
