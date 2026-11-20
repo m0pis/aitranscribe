@@ -14,10 +14,10 @@
 ![NotsAI Dark Theme](./assets/preview.svg)
 ![NotsAI Light Theme](./assets/preview-light.svg)
 
-Пример работы консольного движка на C++20:
+Пример работы консольного движка на C++26:
 
 ```text
-[NotsAI 1.0 · ONNX Runtime C++20 · AVX2]
+[NotsAI 1.0 · ONNX Runtime C++26 · AVX2]
 ├─ Входной поток : prelude_op23.wav (44.1 kHz, 16-bit, Stereo, 03:12)
 ├─ Модуль ЦОС    : CQT-спектрограмма (88 полутонов, PocketFFT) ...... 0.42s
 ├─ Инференс ИИ   : 2D CNN / CRNN (Onsets & Frames) .................. 0.89s
@@ -89,7 +89,7 @@ python app/server.py --port 8080 --model models/notsai_crnn.onnx
 ```mermaid
 flowchart LR
     A[Аудиофайл
-WAV / MP3] --> B[ЦОС C++20
+WAV / MP3] --> B[ЦОС C++26
 PocketFFT + CQT]
     B --> C[ONNX Runtime
 2D CNN Onsets & Frames]
@@ -103,11 +103,11 @@ PocketFFT + CQT]
 NotsAI/
 ├── assets/
 │   └── preview.svg          # Скриншот интерфейса
-├── include/                 # Заголовочные файлы ядра C++20
+├── include/                 # Заголовочные файлы ядра C++26
 │   ├── cqt.hpp              # Спектрограмма постоянной добротности
 │   ├── onnx_runner.hpp      # Инференс ONNX Runtime C++ API
 │   └── quantizer.hpp        # Ритмическое квантование и экспорт MIDI
-├── src/                     # Исходный код C++20
+├── src/                     # Исходный код C++26
 ├── ml/                      # Обучение модели (PyTorch) и экспорт в .onnx
 ├── web/                     # Веб-интерфейс в дизайн-системе Obsidian/Rosewater
 ├── CMakeLists.txt           # Сборка C++ проекта
