@@ -1,6 +1,6 @@
 # Разработка высокопроизводительного программного комплекса автоматической транскрипции музыки в формат MIDI (NotsAI)
 
-![C++20](https://img.shields.io/badge/C%2B%2B-20-08080A?style=flat-square&logo=cplusplus&logoColor=E9699C)
+![C++20](https://img.shields.io/badge/C%2B%2B-26-08080A?style=flat-square&logo=cplusplus&logoColor=E9699C)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-08080A?style=flat-square&logo=python&logoColor=C9E45A)
 ![ONNX Runtime](https://img.shields.io/badge/ONNX_Runtime-1.17-08080A?style=flat-square&logoColor=EFEAE3)
 ![License: MIT](https://img.shields.io/badge/License-MIT-08080A?style=flat-square&color=E9699C)
