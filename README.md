@@ -43,7 +43,7 @@
 
 ```bash
 # 1. Клонирование репозитория
-git clone https://github.com/dmitry-adrov/NotsAI.git
+git clone https://github.com/m0pis/aitranscribe.git
 cd NotsAI
 
 # 2. Установка Python-зависимостей (для обучения модели и локального веб-сервера)
