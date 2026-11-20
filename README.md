@@ -49,7 +49,7 @@ cd NotsAI
 # 2. Установка Python-зависимостей (для обучения модели и локального веб-сервера)
 pip install -r requirements.txt
 
-# 3. Сборка расчетного C++20 ядра через CMake
+# 3. Сборка расчетного C++26 ядра через CMake
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . --config Release
